@@ -3,9 +3,64 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <section class="container-fluid"> <!--Principal-->
+      <div id="sideNavigation" class="sidenav"> <!--Menú-->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#"><i class="far fa-smile"><span class="ff"> Nombre Apellido</span></i></a>
+        <a href="#"><i class="fas fa-globe-americas"><span class="ff"> General</span> </i> </a>
+        <a href="#"><i class="fas fa-map-marker-alt"><span class="ff"> Sedes</span></i></a>
+        <a href="#"><i class="fas fa-graduation-cap"></i> <span class="ff"> Alumnas</span></a>
+      </div>
+
+      <nav class="topnav" id="menu">
+        <a href="#" onclick="openNav()">
+          <svg width="30" height="30" id="icoOpen">
+            <path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
+          </svg>
+        </a>
+      </nav> <!--Menú-->
+
+
+      <section class="row" id="inicio"> <!--Inicio formulario-->
+        <form class="form-group col-10 col-lg-4 mx-auto">
+            <h3>Laboratoria</h3>
+            <img src="http://lorempixel.com/100/100/people" alt="" class="img-thumbnail rounded-circle">
+            <input type="text" class="form-control m-2" id="txt" placeholder= "Email">
+            <input type="password" class="form-control m-2" id="pass" placeholder="Contraseña">
+            <input type="checkbox" class="">
+            <label class="small">Remember me </label>
+            <input type="button" class="btn btn-primary p-2" name="" value="Login" id="login">
+        </form>
+      </section><!--formulario-->
+
+      <article class="row" id= "main"><!--CDMX/5ta-->
+        <section class="row"> <h3 class="col-lg-6"> CDMX/5ta Generación</h3> </section>
+        <section class="row">
+          <h5 class="col-lg-4"> 15 Alumnas activas</h5>
+          <h5 class="col-lg-4"> Listado de estudiantes</h5>
+        </section>
+        <section class="row">
+          <h5 class="col-lg-3"> 78% Progreso de la generación</h5>
+          <h5 class="col-lg-3"> 50% Debajo del 60% </h5>
+          <h5 class="col-lg-3"> 50% Arriba del 90%</h5>
+        </section>
+
+
+      </article><!--CDMX/5ta-->
+
+
+
+    </section><!--Principal-->
+
+    <script src="data.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
