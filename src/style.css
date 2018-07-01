@@ -1,0 +1,30 @@
+/* Colores de Laboratoria
+Yellow 255,229,33  /   #FFE521
+Pink    255,0,158  /   #FF009E
+Green  86,248,154  /   #56F89A
+*/
+.black{
+    color: black;
+}
+
+.nav-bg {
+    background-color: #FFE521;
+    height: 100vh;
+    width: 4.2rem;
+    margin-left: -1rem;
+}
+
+.inputs{
+    border: 1px solid gainsboro;
+    padding: .3rem;
+    border-radius: .4rem;
+    margin: 1rem;
+}
+
+.none {
+    display: none;
+}
+
+.size {
+    font-size: 2em;
+}
