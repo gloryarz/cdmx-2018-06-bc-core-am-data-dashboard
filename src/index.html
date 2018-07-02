@@ -3,15 +3,50 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Data-Dashboard 4</title>
+
+    <title>Data Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"> 
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-</head>
-<body>
+  </head>
+  <body>
+    <main class="container-fluid">
+      <section class="row" id="loginScreen"> <!--Login-->
+        <article class="col-12 text-center">
+          <img src="img/logo.jpeg" alt="Laboratoria Logo" class="img-fluid pt-2 ">
+          <img src="img/user.svg" alt="Usuario" class="mx-auto d-block m-1">
+          <form action="" class="">
+            <input type="text" class="m-1 inputs " id="user" placeholder="Email" value="Laboratoria"><br>
+            <input type="password" class="m-1 inputs " id="password" placeholder="Contraseña" value=""><br>
+            <input type="checkbox" name="" id="" value="">Remeber me</input> 
+            <input type="button" class="btn btn-outline-warning m-1" id="loginBtn" value="Login">
+            <p id="loginError"></p>
+          </form>
+        </article>
+      </section>  <!--Login-->
+      
+      
+      <section id="nav" class="none nav-bg"><!--Menú-->
+        <nav class="nav flex-column size">
+            <a class="nav-link active far fa-grimace black" href="#"></a>
+            <a class="nav-link far fa-list-alt black" href="#"></a>
+            <a class="nav-link far fa-map black" href="#" id="sedesBtn"></a>
+            <a class="nav-link far fa-id-badge black" href="#"></a>
+          </nav>
+
+
+
+      </section><!--Menú-->
+      <section id= "screens" class="none">
+        <div id="demo"></div>
+        <h4></h4>
+      </section>
+
+  
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -65,6 +100,8 @@
                     </div>
                 </div>
             </nav>
+          </main>
+
 
     <script src="data.js" charset="utf-8"></script>
     <script src="main.js" charset="utf-8"></script>
