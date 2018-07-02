@@ -4,7 +4,6 @@ let trial;
 let url ='https://raw.githubusercontent.com/gloryarz/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
 
 const getData = () => {
-    alert('general');
    /* fetch(url)
     .then(resp => resp.json())
     .then((data) => {
