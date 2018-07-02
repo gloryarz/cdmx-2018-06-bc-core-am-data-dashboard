@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
 
+<head>
+    <meta charset="utf-8">
+
+    <title>Laboratoria</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"> 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
   </head>
   <body>
+    <main class="container-fluid">
+      <section class="row" id="loginScreen"> <!--Login-->
+        <article class="col-12 text-center">
+          <img src="img/logo.jpeg" alt="Laboratoria Logo" class="img-fluid pt-2 ">
+          <img src="img/user.svg" alt="Usuario" class="mx-auto d-block m-1">
+          <form action="" class="">
+            <input type="text" class="m-1 inputs " id="user" placeholder="Email" value="Laboratoria"><br>
+            <input type="password" class="m-1 inputs " id="password" placeholder="Contraseña" value=""><br>
+            <input type="checkbox" name="" id="" value="">Remeber me</input> 
+            <input type="button" class="btn btn-outline-warning m-1" id="loginBtn" value="Login">
+            <p id="loginError"></p>
+          </form>
+        </article>
+      </section>  <!--Login-->
 
-
-
+<!-- cambiar de archivo GLORIA :) -->
     <div class="container my -5 text-center">
     <button class="btn btn-danger w-100" onclick="traer()">Obtener</button>
     <div class="mt-5" id="contenido">
@@ -17,8 +37,12 @@
 
     </div>
   </div>
-    <script src="main.js"></script>
-    <script src="data.js" charset="utf-8"></script>
+       
+    </main>
 
-  </body>
+    <script src="buttons.js" charset="utf-8"></script>    
+    <script src="data.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+</body>
+
 </html>

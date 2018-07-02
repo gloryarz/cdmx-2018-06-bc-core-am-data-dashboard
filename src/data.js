@@ -1,3 +1,4 @@
+
 let url = 'https://raw.githubusercontent.com/BrisiaCastrejon/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
 const traer = () =>{
   fetch(url)
@@ -23,3 +24,8 @@ const traer = () =>{
   }
  })
 }
+
+
+//window.computeGenerationsStats = (laboratoria) => {}
+
+
