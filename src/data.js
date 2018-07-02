@@ -1,3 +1,4 @@
+
 let loginScreen = document.getElementById ('loginScreen');
 let loginBtn = document.getElementById('loginBtn');
 let user = document.getElementById('user');
@@ -44,3 +45,5 @@ const getData = () => {
 
   
   sedesBtn.addEventListener('click', getData);
+
+
