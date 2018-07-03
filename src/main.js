@@ -23,7 +23,7 @@ let santiago = document.getElementById('santiago');
 let alumnas = document.getElementById('alumnas');
 
 
-general.addEventListener('click', getData);
-
+//general.addEventListener('click', getData);
+//alumnas.addEventListener('click', getAlumnas);
 
 
