@@ -24,4 +24,5 @@ let alumnas = document.getElementById('alumnas');
 
 
 //general.addEventListener('click', getData);
-alumnas.addEventListener('click', getAlumnas);
+//alumnas.addEventListener('click', getAlumnas);
+

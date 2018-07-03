@@ -29,8 +29,9 @@ Green  86,248,154  /   #56F89A
 }
 
 .size {
-    font-size: 2em;
+    font-size: 1.5em;
 }
+
 
 /* Menú */
 =======
@@ -215,3 +216,12 @@ ul.CTAs a {
     }
 
 }
+.user {
+    font-size: 5rem;
+    color: #FF009E;
+}
+
+.inline{
+    display: inline-block;
+}
+
