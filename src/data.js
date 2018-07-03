@@ -1,4 +1,4 @@
-let content = document.querySelector("#content");
+//let content = document.querySelector("#content");
 let url = 'https://raw.githubusercontent.com/BrisiaCastrejon/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
 const getAlumnas = () =>{
   fetch(url)
@@ -10,6 +10,11 @@ const getAlumnas = () =>{
          generaciones.forEach((generacion)=> {
            let selectgeneracion = generacion;
            let arregloEstudiantes = data[sedes].generacion[generacion].estudiantes;
+         let generaciones = Object.keys(data[sedes].generacion);
+         generaciones.forEach((generacion)=> {
+           let selectgeneracion = generacion;
+           console.log(selectgeneracion);
+         let arregloEstudiantes = data[sedes].generacion[generacion].estudiantes;
          arregloEstudiantes.forEach((estudiante)=>{
            let nombre = estudiante.nombre;
            let correo = estudiante.correo;
@@ -39,6 +44,12 @@ const getAlumnas = () =>{
           const contenido = document.createTextNode(sedes +" " + selectgeneracion + " " + nombre + " " + duracion + "% completado");
           lista.appendChild(contenido);
           document.body.appendChild(lista);
+
+           const lista = document.createElement("li");
+           const contenido = document.createTextNode(sedes +" " + selectgeneracion + " " + nombre + " " + correo +" "+ turno );
+           lista.appendChild(contenido);
+           document.body.appendChild(lista);
+
     })
    })
   }
