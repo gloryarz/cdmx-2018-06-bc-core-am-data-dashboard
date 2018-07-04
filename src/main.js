@@ -9,7 +9,7 @@ let prueba = document.getElementById('prueba');
 let loginError = document.getElementById('loginError');
 
 // Botón Login
-loginBtn.addEventListener('click', login);
+//loginBtn.addEventListener('click', login);
 
 // ---------------------   Acaba Login   ---------------------
 
@@ -24,5 +24,4 @@ let alumnas = document.getElementById('alumnas');
 
 
 //general.addEventListener('click', getData);
-//alumnas.addEventListener('click', getAlumnas);
-
+alumnas.addEventListener('click', getAlumnas);
