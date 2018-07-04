@@ -9,7 +9,7 @@ let prueba = document.getElementById('prueba');
 let loginError = document.getElementById('loginError');
 
 // Botón Login
-loginBtn.addEventListener('click', login);
+//loginBtn.addEventListener('click', login);
 
 // ---------------------   Acaba Login   ---------------------
 
