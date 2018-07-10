@@ -216,7 +216,10 @@ ul.CTAs a {
     }
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/master
 .user {
     font-size: 5rem;
     color: #FF009E;
@@ -225,6 +228,7 @@ ul.CTAs a {
 .inline{
     display: inline-block;
 }
+<<<<<<< HEAD
 .smile {
    font-size: 6rem;
    padding: 1rem;
@@ -244,3 +248,6 @@ ul.CTAs a {
    font-size: 1.3em;
    color: #FF009E;
 }
+=======
+
+>>>>>>> refs/remotes/origin/master
