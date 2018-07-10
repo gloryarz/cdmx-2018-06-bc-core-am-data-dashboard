@@ -29,8 +29,9 @@ Green  86,248,154  /   #56F89A
 }
 
 .size {
-    font-size: 2em;
+    font-size: 1.5em;
 }
+
 
 /* Menú */
 =======
@@ -106,7 +107,7 @@ a, a:hover, a:focus {
 }
 #sidebar ul li a:hover {
     color: #ffa000;
-    background: #fff;
+    background: #282a27;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
@@ -214,4 +215,32 @@ ul.CTAs a {
         transform: rotate(-45deg) translate(1px, -1px);
     }
 
+}
+
+.user {
+    font-size: 5rem;
+    color: #FF009E;
+}
+
+.inline{
+    display: inline-block;
+}
+.smile {
+   font-size: 6rem;
+   padding: 1rem;
+   color: #6c757d;
+}
+
+.txto{
+   display: inline-block;
+   font-size: 1rem;
+   padding: 1rem;
+   background-color: #ff1b9d21;
+
+}
+
+.boldi {
+   font-family: bitter;
+   font-size: 1.3em;
+   color: #FF009E;
 }
