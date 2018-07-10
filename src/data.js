@@ -1,6 +1,7 @@
-//let content = document.querySelector("#content"); 
 let url = 'https://raw.githubusercontent.com/BrisiaCastrejon/cdmx-2018-06-bc-core-am-data-dashboard/master/data/laboratoria.json';
-/*const getAlumnas = () =>{
+let stats = {};
+/*
+const getAlumnas = () =>{
   fetch(url)
   .then(response => response.json())
   .then( data => {
@@ -45,81 +46,58 @@ let url = 'https://raw.githubusercontent.com/BrisiaCastrejon/cdmx-2018-06-bc-cor
           lista.appendChild(contenido);
           document.body.appendChild(lista);
 
-           const lista = document.createElement("li");
-           const contenido = document.createTextNode(sedes +" " + selectgeneracion + " " + nombre + " " + correo +" "+ turno );
-           lista.appendChild(contenido);
-           document.body.appendChild(lista);
-
     })
    })
   }
  })
-  }   */
-
-
-/*
-const traer = () =>{
-  fetch(url)
-  .then(response => response.json())
-  .then( data => {
-    let convertData = Object.keys(data);
-       for(sedes in data){
-         let generaciones = Object.keys(data[sedes].generacion);
-         generaciones.forEach((generacion)=> {
-           let selectgeneracion = generacion;
-           console.log(selectgeneracion);
-         let arregloEstudiantes = data[sedes].generacion[generacion].estudiantes;
-         arregloEstudiantes.forEach((estudiante)=>{
-           let nombre = estudiante.nombre;
-           let correo = estudiante.correo;
-           let turno = estudiante.turno;
-           const lista = document.createElement("li");
-           const contenido = document.createTextNode(sedes +" " + selectgeneracion + " " + nombre + " " + correo +" "+ turno );
-           lista.appendChild(contenido);
-           document.body.appendChild(lista);
-    })
-   })
-
-  }
- })
-}
+}  
 */
 
-//window.computeGenerationsStats = (laboratoria) => {}
+// window.computeGenerationsStats = (laboratoria) => {}
+
+
+// este es el bueno
 
 let contenido = document.getElementById('contenido');
 let screens = document.getElementById('screens');
-let talk;
+let talk = ' ';
 const traer = () =>{
   fetch(url)
-  .then(response => response.json())
-  .then( data => {
-    let convertData = Object.keys(data);
-       for(sedes in data){
-         let generaciones = Object.keys(data[sedes].generacion);
-         generaciones.forEach((generacion)=> {
-           let selectgeneracion = generacion;
-           console.log(selectgeneracion);
-         let arregloEstudiantes = data[sedes].generacion[generacion].estudiantes;
-         arregloEstudiantes.forEach((estudiante)=>{
-           let nombre = estudiante.nombre;
-           let correo = estudiante.correo;
-           let turno = estudiante.turno;
-            screens.style.display = "none";
-            talk += `<li class="list-group-item "> <i class="far fa-grin size user"></i> <b class="size">${nombre}</b>  ${sedes}
-           ${selectgeneracion} ${correo} ${turno}</li>`
-          
+    .then(response => response.json())
+    .then(data => {
+      let convertData = Object.keys(data);
+      for (sedes in data) {
+        let generaciones = Object.keys(data[sedes].generacion);
+        generaciones.forEach((generacion)=> {
+          let selectgeneracion = generacion;
+          console.log(selectgeneracion);
+          let arregloEstudiantes = data[sedes].generacion[generacion].estudiantes;
+          arregloEstudiantes.forEach((estudiante)=>{
+            let nombre = estudiante.nombre;
+            let correo = estudiante.correo;
+            let turno = estudiante.turno;
+            screens.style.display = 'none';
+            // talk += `<li class="list-group-item "> <i class="far fa-grin size user"></i> <b class="size">${nombre}</b>  ${sedes}
+            // ${selectgeneracion} ${correo} ${turno}</li>`
+            talk += `<li class="list-group-item "> <i class="far fa-grin size user"></i> <b class="size"> <br> ${nombre}</b> <br> Sede: ${sedes} <br>
+           Generación: ${selectgeneracion} <br> Email: ${correo} <br> Turno: ${turno}</li>`; 
+      
             contenido.innerHTML = talk;
-            /*
-           const lista = document.createElement("li");
-           const contenido = document.createTextNode(sedes +" " + selectgeneracion + " " + nombre + " " + correo +" "+ turno );
-           lista.appendChild(contenido);
-           document.body.appendChild(lista); */
-    })
-   })
+          });
+        });
+      }
+    });
+};
 
-  }
- })
-}
 
+// ------------------------
+
+
+window.computeGenerationsStats = () => {
+
+};
+
+window.computeStudentsStats = () => {
+  
+};
 
