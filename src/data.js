@@ -3,6 +3,8 @@ let url = 'https://raw.githubusercontent.com/BrisiaCastrejon/cdmx-2018-06-bc-cor
 // vaariables para impresion
 let contenido = document.getElementById('contenido');
 let screens = document.getElementById('screens');
+let tBody = document.getElementById('tBody');
+let table = document.getElementById('table');
 let talk = ' ';
 // funcion para cargar la data desde un inicio
 window.onload = () => {
@@ -84,13 +86,23 @@ const computeStudentsStats = (laboratoria) => {
     }
   }
   impresionStudents(student);
+  filterStudentsLima(student);
+  filterStudentsMexico(student);
+  filterStudentsSantiago(student);
+  promedioGeneracionesS(student);
+  promedioGeneracionesM(student);
+  promedioGeneracionesL(student);
+  pantallaGeneral(student);
 };
 const impresionStudents = (student) => {
   document.getElementById('pruebas').addEventListener('click', (event) => {
     let result = '';
     const info = Object.values(student);
+    screens.style.display = 'none';
+    table.style.display = 'none';
+    generalPantalla.style.display = 'none';
+    contenido.style.display = 'block';
     for (let i = 0; i < info.length; i++) {
-      screens.style.display = 'none';
       result += `<div class="card text-center float-left pt-2" style="width: 18rem;">
          <i class="far fa-grin card-img-top smile"></i>
          <div class="card-body txto">
@@ -103,6 +115,69 @@ const impresionStudents = (student) => {
          </div>
           </div> `;
     } contenido.innerHTML = result;
+  });
+};
+
+const filterStudentsLima = (student) => {
+  document.getElementById('lima').addEventListener('click', (event) => {
+    const info = Object.values(student);
+    screens.style.display = 'none';
+    contenido.style.display = 'none';
+    generalPantalla.style.display = 'none';
+    table.style.display = 'block';
+    for (item of info) {
+      let allCampus = item.campus;
+      let allGenerations = item.generation;
+      if (allCampus === 'lima') {
+        tBody.innerHTML += `<tr>
+        <th scope="row">${item.name}</th>
+        <td>${item.generation}</td>
+        <td>${item.stats.completedPercentage}</td>
+      </tr>`;
+      }
+    }
+  });
+};
+
+const filterStudentsMexico = (student) => {
+  document.getElementById('mexico').addEventListener('click', (event) => {
+    const info = Object.values(student);
+    screens.style.display = 'none';
+    contenido.style.display = 'none';
+    generalPantalla.style.display = 'none';
+    table.style.display = 'block';
+    for (item of info) {
+      let allCampus = item.campus;
+      let allGenerations = item.generation;
+      if (allCampus === 'mexico') {
+        tBody.innerHTML += `<tr>
+        <th scope="row">${item.name}</th>
+        <td>${item.generation}</td>
+        <td>${item.stats.completedPercentage}</td>
+      </tr>`;
+      }
+    }
+  });
+};
+
+const filterStudentsSantiago = (student) => {
+  document.getElementById('santiago').addEventListener('click', (event) => {
+    const info = Object.values(student);
+    screens.style.display = 'none';
+    contenido.style.display = 'none';
+    generalPantalla.style.display = 'none';
+    table.style.display = 'block';
+    for (item of info) {
+      let allCampus = item.campus;
+      let allGenerations = item.generation;
+      if (allCampus === 'santiago') {
+        tBody.innerHTML += `<tr>
+        <th scope="row">${item.name}</th>
+        <td>${item.generation}</td>
+        <td>${item.stats.completedPercentage}</td>
+      </tr>`;
+      }
+    }
   });
 };
 
@@ -148,4 +223,63 @@ const computeGenerationsStats = (laboratoria) => {
   }
   // console.log(generation);
   return generation;
+};
+
+// falta por vicular promedio santiago
+const promedioGeneracionesS = (student) => {
+  let resultado = 0;
+  const data = Object.values(student);
+  for (item of data) {
+    let allCampus = item.campus;
+    let allPorcen = item.stats.completedPercentage;
+    if (allCampus === 'santiago') {
+      resultado += allPorcen;
+    }
+  }
+  let operacion = Math.round(resultado / 45);
+  document.getElementById('promS').innerHTML = `${operacion}%`;
+};
+// falta por vicular promedio mexico
+const promedioGeneracionesM = (student) =>{
+  let resultado = 0;
+  const data = Object.values(student);
+  for (item of data) {
+    let allCampus = item.campus;
+    let allPorcen = item.stats.completedPercentage;
+    if (allCampus === 'mexico') {
+      resultado += allPorcen;
+    }
+  }
+  let operacion = Math.round(resultado / 45);
+  document.getElementById('promM').innerHTML = `${operacion}%`;
+};
+// falta por vicular promedio santiago
+const promedioGeneracionesL = (student) =>{
+  let resultado = 0;
+  const data = Object.values(student);
+  for (item of data) {
+    let allCampus = item.campus;
+    let allPorcen = item.stats.completedPercentage;
+    if (allCampus === 'lima') {
+      resultado += allPorcen;
+    }
+  }
+  let operacion = Math.round(resultado / 44);
+  document.getElementById('promL').innerHTML = `${operacion}%`;
+};
+
+
+const pantallaGeneral = (student) => {
+  document.getElementById('general').addEventListener('click', (event) => {
+    screens.style.display = 'none';
+    contenido.style.display = 'none';
+    generalPantalla.style.display = 'block';
+    table.style.display = 'none';
+    let count = 0;
+    for (key in student) {
+      count ++
+    }
+    
+    document.getElementById('contador').innerHTML = count;
+  });
 };
