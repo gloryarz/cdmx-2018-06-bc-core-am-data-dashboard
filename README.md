@@ -1,4 +1,30 @@
 # Data Dashboard
+##Speech de presentación
+
+Como sabemos, la clave del progreso se encuentra en la manipulación de DATA, y partiendo de esto, para la creación de nuestro producto nos enfocamos primordialmente en las TMs de Laboratoria. Quienes son las encargadas de seguir detalladamente el progreso de las estudiantes y el desarrollo del bootcamp.
+
+Realizando el research correspondiente, pudimos enfatizar la necesidad de una interfaz amigable que procesara la información para ellos, y la presentará de forma clara y fácil de interpretar.
+
+Cual es la información que necesitan:
+promedio general de la generación actual.
+promedio general de las generaciones actuales en otras sedes.
+promedio general de avance de las chicas.
+listado completo por generación y sede.
+porcentajes de comparación entre generaciones, sedes, y alumnas en ese orden.
+
+Cuales son los obstáculos a los que se enfrentan las TMs al analizar DATA en estos momentos:
+demasiadas carpetas.
+demasiado tiempo invertido en buscar la data.
+procesamiento manual de la data.
+
+Diseño seleccionado para la interfaz:
+Como institución, Laboratoria maneja 4 colores, 2  principales que son NEGRO Y AMARILLO, y 2 secundarios, EL ROSA Y EL VERDE. Para fines prácticos y de usabilidad seleccionamos los dos principales (negro  y amarillo) por ser los de mayor identificación tanto para el personal que trabaja, como para el público en general, y el rosa como identificador individual por cada estudiante.
+
+Presentación de la interfaz:
+Cuenta con un LOGIN, que permite tener un acceso restringido y exclusivo solamente para el personal de laboratoria.
+Una vez ingresado el usuario y la contraseña previamente registrada, presenta una visión  general del estatus de laboratoria, es decir, presenta PORCENTAJES POR SEDES DE TODAS LAS GENERACIONES, ESTUDIANTES ACTIVAS, Y LISTADO DE ESTUDIANTES DE TODAS LAS SEDES, DE TODAS LAS GENERACIONES.
+Una vez dentro, es posible seleccionar la data de acuerdo a las necesidades del usuario.
+
 
 ## Preámbulo
 
@@ -86,9 +112,6 @@ La carpeta `data/` dentro del _boilerplate_ incluye un extracto de la data que
 podemos usar tanto en los tests como en la interfaz en sí.
 
 a.
-
-
-
 La carpeta de `ux/`, incluye un `README` donde vas a encontrar una guía de qué hacer. Te pedimos que ahí mismo documentes ese proceso que realizaste.
 
 ## Entregables
@@ -99,11 +122,6 @@ proyecto son:
 ### User Experience Design
 
 #### 1) Definición del producto
-
-En el `README.md` cuéntanos cómo pensaste y te acercaste a los usuarios al
-desarrollar tu producto (Tip: entrevistas) y cuál fue tu proceso para definir
-el producto final a nivel de experiencia y de interfaz. Es importante que
-detalles:
 
 * Quiénes son los principales usuarios de producto.
 * Cuáles son los objetivos de estos usuarios en relación con el producto.
@@ -342,34 +360,6 @@ Una página se abrirá en tu navegador conteniendo los resultados de las pruebas
 Muy importante archivo, aunque no siempre estará (depende del proyecto). Acá es
 donde está el set de datos de prueba que se usarán para correr las pruebas.
 
-
-
-<!-- ### Habilidades blandas
-
-Para completar este proyecto deberás realizar una planificación general del
-proyecto, donde esperamos que generes un plan paso a paso de cómo resolverás
-el proyecto. Deberás considerar las distintas secciones del data dashboard, los
-recursos y el tiempo que dispones.
-
-Para lograrlo, deberás trabajar de manera colaborativa con tu compañera, para
-esto tienen que coordinarse en la construcción del producto, viendo de qué
-manera quieren trabajar y qué responsabilidades tendrá cada una para que así
-cumplan con los tiempos de entrega y ejecución.
-
-Para este proyecto busca instancias de code review, donde deberás buscar
-feedback de tu código con otro dupla, para que puedas mejorar el producto.
-Mientras más feedback recibas, mejor será su producto.
-
-Nos interesa ver tu capacidad de autoaprendizaje, por lo que esperamos que
-logren realizar el hacker edition, de esta manera podrás llevar tu producto al
-siguiente nivel.
-
-Para finalizar, deberás presentar su data dashboard al resto del curso, para
-esto necesitarás que tu demo tenga acceso desde cualquier computador y que
-puedas realizar una presentación que permita a todos comprender lo realizado.
-Sabemos que puede ser una instancia difícil, esperamos que logres mostrar su
-trabajo y los demás lo comprendan. -->
-
 ## Hacker edition
 
 Features/características extra sugeridas:
@@ -482,30 +472,6 @@ Esperamos que alcances al menos el nivel 2 en todas tus habilidades blandas.
   ganarás otros 25 XPs.
 * Completando los ejercicios de manipulación de objetos en el LMS (https://lms.laboratoria.la/cohorts/lim-2018-05-bc-core-am/courses/javascript/05-objects/06-practice)
   ganarás otros 25 XPs.
-
-## Primeros pasos
-
-1. Antes que nada, asegúrate de tener un :pencil: editor de texto en
-  condiciones, algo como [Atom](https://atom.io/) o
-  [Code](https://code.visualstudio.com/).
-2. Para ejecutar los comandos a continuación necesitarás una :shell:
-  [UNIX Shell](https://github.com/Laboratoria/curricula-js/tree/v2.x/topics/shell),
-  que es un programita que interpreta líneas de comando (command-line
-  interpreter) así como tener [git](https://github.com/Laboratoria/curricula-js/tree/v2.x/topics/scm/01-git)
-  instalado. Si usas un sistema operativo "UNIX-like", como GNU/Linux o MacOS,
-  ya tienes una _shell_ (terminal) instalada por defecto (y probablemente `git`
-  también). Si usas Windows puedes usar [Git bash](https://git-scm.com/download/win),
-  aunque recomendaría que consideres probar :penguin: GNU/Linux.
-3. Una de las integrantes del equipo debe realizar un :fork_and_knife: [fork](https://help.github.com/articles/fork-a-repo/)
-del repo de tu cohort, tus _coaches_ te compartirán un _link_ a un repo. La otra integrante del equipo deber hacer un fork **del repositorio de su compañera** y [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote` hacia el mismo.
-4. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-  tu _fork_ a tu computadora (copia local).
-5. 📦 Instala las dependencias del proyecto con el comando `npm
-  install`. Esto asume que has instalado [Node.js](https://nodejs.org/) (que
-  incluye [npm](https://docs.npmjs.com/)).
-6. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-  pruebas unitarias (unit tests) con el comando `npm test`.
-7. A codear se ha dicho! :rocket:
 
 ## Herramientas
 
