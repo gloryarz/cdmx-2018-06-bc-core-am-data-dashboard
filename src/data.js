@@ -238,6 +238,8 @@ const promedioGeneracionesS = (student) => {
   }
   let operacion = Math.round(resultado / 45);
   document.getElementById('promS').innerHTML = `${operacion}%`;
+  // contenido.innerHTML = operacion;
+
 };
 // falta por vicular promedio mexico
 const promedioGeneracionesM = (student) =>{
@@ -252,6 +254,8 @@ const promedioGeneracionesM = (student) =>{
   }
   let operacion = Math.round(resultado / 45);
   document.getElementById('promM').innerHTML = `${operacion}%`;
+  // contenido.innerHTML = operacion;
+
 };
 // falta por vicular promedio santiago
 const promedioGeneracionesL = (student) =>{
@@ -282,4 +286,5 @@ const pantallaGeneral = (student) => {
     
     document.getElementById('contador').innerHTML = count;
   });
+  // contenido.innerHTML = operacion;
 };
